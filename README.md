@@ -14,4 +14,4 @@ reVisi is a platform for sharing Figma designs that allows users to upload and s
 ### Website Link
 https://revisi-rek.vercel.app/
 
-### Sh00tz for GayaTama Web Design Competition 🔫
+### Sh00tz GayaTama Web Design Competition 🔫
