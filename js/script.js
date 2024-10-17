@@ -1,4 +1,3 @@
-
 // Animasi 
 const badge = document.querySelector('.floating-element.bagus-badge');
 const heroSection = document.querySelector('.hero-column');

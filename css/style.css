@@ -28,11 +28,9 @@ header {
     right: 0;
     padding: 10px 10% 10px 10%;
     background: rgba(255, 255, 255, 0.2);
-    /* Semi-transparent background */
     backdrop-filter: blur(10px);
     width: 100%;
     z-index: 1;
-    /* Stays on top */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,7 +142,10 @@ header {
 .main-title {
     font-size: 34px;
     color: #333;
-    font-weight: bold;
+    font-weight: 800;
+    font-family: "Space Grotesk", sans-serif;
+    line-height: 1.1;
+
 
 }
 
@@ -340,7 +341,7 @@ header {
 
     .menu-navbar {
         display: block;
-        color: var(--gelap);
+        color: var(--ungu);
         font-size: 24px;
         cursor: pointer;
     }
@@ -429,15 +430,52 @@ header {
         width: 100%;
     }
 
+    .kartu-container {
+        display: grid !important; 
+        grid-template-columns: 1fr !important; /* Menampilkan satu kolom kartu */
+        gap: 16px !important;
+        padding: 16px !important;
+    }
 
+    .kartu {
+        width: 100% !important; /* Membuat kartu mengisi lebar container */
+    }
 
+    .kartu img {
+        width: 100% !important;
+        height: auto !important;
+    }
 
-    @media (min-width: 769px) {
-        #hamburger-menu {
-            display: none;
-        }
+        .top-3-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Atur urutan untuk tampilan mobile */
+    .top-3-cards .card:nth-child(1) {
+        order: 2; /* Ahmed (juara 2) turun ke bawah */
+    }
+
+    .top-3-cards .card:nth-child(2) {
+        order: 1; /* Siti (juara 1) naik ke atas */
+    }
+
+    .top-3-cards .card:nth-child(3) {
+        order: 3; /* Budi tetap di posisi ke-3 */
+    }
+
+    /* Penyesuaian ukuran kartu untuk mobile */
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #search {
+    margin-top: -50px;
     }
 }
+
+
 
 .lineuhuy {
     position: relative;
@@ -459,22 +497,18 @@ header {
 }
 
 .title {
-    font-size: 40px;
+    font-size: 30px;
     color: #333;
-    /* Warna teks */
     padding: 10px;
-    /* Jarak dalam marquee */
 }
 
 @keyframes move {
     0% {
         transform: translateX(0);
-        /* Mulai dari posisi tengah */
     }
 
     100% {
         transform: translateX(-100%);
-        /* Bergerak ke kiri hingga keluar */
     }
 }
 
@@ -491,12 +525,10 @@ header {
 @keyframes lineMove {
     0% {
         transform: translateX(-100%);
-        /* Mulai dari luar kiri */
     }
 
     100% {
         transform: translateX(100%);
-        /* Bergerak ke kanan hingga keluar */
     }
 }
 
@@ -649,14 +681,12 @@ header {
     outline: none;
 }
 
-/* Gaya untuk tab yang sedang aktif */
 .tabs button.active {
     color: var(--ungu);
     position: relative;
     padding: 0;
 }
 
-/* Tambahkan underline untuk tab yang aktif */
 .tabs button.active::after {
     content: '';
     position: absolute;
@@ -786,7 +816,6 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Style for the design level */
 .design-level {
     display: block;
     font-size: 0.9em;
@@ -964,7 +993,7 @@ button:hover {
     transition: all 0.3s ease;
 }
 
-/* CSS untuk tombol close, minimize, maximize di style macOS */
+/* CSS kayak style macOS */
 .window-buttons {
     display: flex;
     justify-content: flex-start;
@@ -1452,12 +1481,6 @@ button:hover {
 }
 
 
-@media (max-width: 768px) {
-    .top-3-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
 
 
 /*  */
@@ -1575,24 +1598,6 @@ button:hover {
 
 .open-btn:hover {
     background-color: #c8235a;
-}
-
-/* dificulty level */
-.difficulty-level {
-    color: #2c3e50;
-    background-color: #f9d85b;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0px 20px 40px rgba(74, 114, 255, 0.3);
-    display: inline-block;
-    margin-top: 10px;
-
-}
-
-.difficulty-level p {
-    margin: 0;
 }
 
 #komen {
